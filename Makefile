@@ -74,7 +74,7 @@ publish:
 
 github: publish
 	ghp-import -m "$(GITHUB_PAGES_COMMIT_MESSAGE)" -b $(GITHUB_PAGES_BRANCH) "$(OUTPUTDIR)" --no-jekyll
-	git push origin $(GITHUB_PAGES_BRANCH)
+	git push --force origin $(GITHUB_PAGES_BRANCH)
 
 
 .PHONY: html help clean regenerate serve serve-global devserver devserver-global publish github
