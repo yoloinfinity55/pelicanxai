@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+        <head>
+                {% block head %}
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>{% block title %}{{ SITENAME|striptags }}{%endblock%}</title>
+                        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" />
+                        {% if FEED_ALL_ATOM %}
+                                <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+                        {% endif %}
+                        {% if FEED_ALL_RSS %}
+                                <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+                        {% endif %}
+                        {% block extra_head %}{% endblock extra_head %}
+                {% endblock head %}
+        </head>
+
+        <body class="min-h-screen bg-gray-50 dark:bg-gray-900 font-sans text-gray-900 dark:text-gray-100 antialiased">
+                {% include 'github.html' %}
+                <header class="bg-white dark:bg-gray-800 shadow-sm dark:shadow-gray-700 px-4 py-3">
+                        <div class="max-w-7xl mx-auto flex items-center justify-between">
+                                <h1 class="text-xl md:text-2xl font-bold"><a href="{{ SITEURL }}/" class="text-inherit no-underline hover:text-blue-600 dark:hover:text-blue-400">{{ SITENAME }}{% if SITESUBTITLE %} <span class="font-normal">{{ SITESUBTITLE }}</span>{% endif %}</a></h1>
+                                <nav class="hidden md:block">
+                                        <ul class="flex space-x-6 px-0">
+                                                {% for title, link in MENUITEMS %}
+                                                        <li class="mb-0"><a href="{{ link }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">{{ title }}</a></li>
+                                                {% endfor %}
+                                                {% if DISPLAY_PAGES_ON_MENU -%}
+                                                        {% for pg in pages %}
+                                                                <li class="mb-0{% if pg == page %} bg-gray-100 dark:bg-gray-700{% endif %}"><a href="{{ SITEURL }}/{{ pg.url }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">{{ pg.title }}</a></li>
+                                                        {% endfor %}
+                                                {% endif %}
+                                                {% if DISPLAY_CATEGORIES_ON_MENU -%}
+                                                        {% for cat, null in categories %}
+                                                                <li class="mb-0{% if cat == category %} bg-gray-100 dark:bg-gray-700{% endif %}"><a href="{{ SITEURL }}/{{ cat.url }}" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">{{ cat }}</a></li>
+                                                        {% endfor %}
+                                                {% endif %}
+                                        </ul>
+                                </nav>
+                                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                                        <svg id="theme-icon-moon" class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                        <svg id="theme-icon-sun" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
+                                </button>
+                        </div>
+                </header>
+                <main class="max-w-7xl mx-auto px-4 py-8">
+                {% block content %}
+                {% endblock %}
+                </main>
+                <section class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
+                        {% if LINKS %}
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm dark:shadow-gray-700">
+                                        <h2 class="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">{{ LINKS_WIDGET_NAME | default('links') }}</h2>
+                                        <ul class="space-y-2">
+                                                {% for name, link in LINKS %}
+                                                        <li><a href="{{ link }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">{{ name }}</a></li>
+                                                {% endfor %}
+                                        </ul>
+                                </div><!-- /.blogroll -->
+                        {% endif %}
+                        {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
+                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm dark:shadow-gray-700">
+                                        <h2 class="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">{{ SOCIAL_WIDGET_NAME | default('social') }}</h2>
+                                        <ul class="space-y-2">
+                                                {% if FEED_ALL_ATOM %}
+                                                        <li><a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">atom feed</a></li>
+                                                {% endif %}
+                                                {% if FEED_ALL_RSS %}
+                                                        <li><a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">rss feed</a></li>
+                                                {% endif %}
+
+                                                {% for name, link in SOCIAL %}
+                                                        <li><a href="{{ link }}" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">{{ name }}</a></li>
+                                                {% endfor %}
+                                        </ul>
+                                </div><!-- /.social -->
+                        {% endif %}
+                </section><!-- /#extras -->
+
+                <footer class="bg-white border-t px-4 py-8 text-center text-gray-600">
+                        <div class="max-w-7xl mx-auto">
+                                <address class="not-italic text-sm mb-2">
+                                        Proudly powered by <a rel="nofollow" href="https://getpelican.com/" class="text-blue-600 hover:underline">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/" class="text-blue-600 hover:underline">Python</a>.
+                                </address>
+                                <p class="text-xs">The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/" class="text-blue-600 hover:underline">Smashing Magazine</a>, thanks!</p>
+                        </div>
+                </footer>
+
+                {% include 'analytics.html' %}
+                {% include 'disqus_script.html' %}
+                <script>
+                        // Theme toggle functionality
+                        const theme = (() => {
+                                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                                        return localStorage.getItem('theme');
+                                }
+                                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                                        return 'dark';
+                                }
+                                return 'light';
+                        })();
+
+                        if (theme === 'dark') {
+                                document.documentElement.classList.add('dark');
+                                document.getElementById('theme-icon-moon').classList.add('hidden');
+                                document.getElementById('theme-icon-sun').classList.remove('hidden');
+                        } else {
+                                document.getElementById('theme-icon-sun').classList.add('hidden');
+                                document.getElementById('theme-icon-moon').classList.remove('hidden');
+                        }
+                        localStorage.setItem('theme', theme);
+
+                        document.getElementById('theme-toggle').addEventListener('click', () => {
+                                const html = document.documentElement;
+                                if (html.classList.contains('dark')) {
+                                        html.classList.remove('dark');
+                                        localStorage.setItem('theme', 'light');
+                                        document.getElementById('theme-icon-sun').classList.add('hidden');
+                                        document.getElementById('theme-icon-moon').classList.remove('hidden');
+                                } else {
+                                        html.classList.add('dark');
+                                        localStorage.setItem('theme', 'dark');
+                                        document.getElementById('theme-icon-moon').classList.add('hidden');
+                                        document.getElementById('theme-icon-sun').classList.remove('hidden');
+                                }
+                        });
+                </script>
+        </body>
+</html>

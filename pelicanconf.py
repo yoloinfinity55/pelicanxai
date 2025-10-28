@@ -31,5 +31,7 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
+THEME = "themes/custom"
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True

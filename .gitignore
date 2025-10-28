@@ -6,6 +6,13 @@ build/
 dist/
 *.egg-info/
 
+# Node.js
+node_modules/
+npm-debug.log*
+
 # Pelican
 output/
 cache/
+
+# macOS
+.DS_Store
