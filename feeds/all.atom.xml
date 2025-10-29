@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pelicanxai</title><link href="https://yoloinfinity55.github.io/pelicanxai/" rel="alternate"/><link href="https://yoloinfinity55.github.io/pelicanxai/feeds/all.atom.xml" rel="self"/><id>https://yoloinfinity55.github.io/pelicanxai/</id><updated>2025-10-28T19:30:00-04:00</updated><entry><title>Standard Operating Procedure for Pelicanxai</title><link href="https://yoloinfinity55.github.io/pelicanxai/standard-operating-procedure-for-pelicanxai.html" rel="alternate"/><published>2025-10-28T19:30:00-04:00</published><updated>2025-10-28T19:30:00-04:00</updated><author><name>Infinity55</name></author><id>tag:yoloinfinity55.github.io,2025-10-28:/pelicanxai/standard-operating-procedure-for-pelicanxai.html</id><summary type="html">&lt;p&gt;This document outlines the standard operating procedure (SOP) for the Pelicanxai project.&lt;/p&gt;
+&lt;h2&gt;Content Creation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Create a new post:&lt;/strong&gt; Create a new Markdown file in the &lt;code&gt;content/&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add metadata:&lt;/strong&gt; Add the following metadata to the top of the file:
+    &lt;code&gt;Title: Your Blog Post Title
+    Date: YYYY-MM-DD HH:MM
+    Category: Your …&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;This document outlines the standard operating procedure (SOP) for the Pelicanxai project.&lt;/p&gt;
+&lt;h2&gt;Content Creation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Create a new post:&lt;/strong&gt; Create a new Markdown file in the &lt;code&gt;content/&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add metadata:&lt;/strong&gt; Add the following metadata to the top of the file:
+    &lt;code&gt;Title: Your Blog Post Title
+    Date: YYYY-MM-DD HH:MM
+    Category: Your Category&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write content:&lt;/strong&gt; Write the blog post in Markdown format.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preview locally:&lt;/strong&gt; Preview the changes locally by running &lt;code&gt;make devserver&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commit and push:&lt;/strong&gt; Once you are satisfied with the changes, commit the file and push it to the &lt;code&gt;main&lt;/code&gt; branch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Dependency Management&lt;/h2&gt;
+&lt;p&gt;The project's dependencies are managed using &lt;code&gt;pip&lt;/code&gt; and the &lt;code&gt;requirements.txt&lt;/code&gt; file. To add a new dependency, add it to the &lt;code&gt;requirements.txt&lt;/code&gt; file and then run &lt;code&gt;pip install -r requirements.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Theme Customization&lt;/h2&gt;
+&lt;p&gt;The blog's theme can be customized by modifying the files in the &lt;code&gt;theme/&lt;/code&gt; directory. The theme uses the Jinja2 templating engine. After making changes to the theme, you need to rebuild the site to see the changes.&lt;/p&gt;
+&lt;h2&gt;Deployment&lt;/h2&gt;
+&lt;p&gt;The site is deployed automatically to GitHub Pages whenever changes are pushed to the &lt;code&gt;main&lt;/code&gt; branch. You can monitor the deployment process in the "Actions" tab of the GitHub repository.&lt;/p&gt;</content><category term="SOP"/></entry><entry><title>Project Specification for Pelicanxai</title><link href="https://yoloinfinity55.github.io/pelicanxai/project-specification-for-pelicanxai.html" rel="alternate"/><published>2025-10-28T19:00:00-04:00</published><updated>2025-10-28T19:00:00-04:00</updated><author><name>Infinity55</name></author><id>tag:yoloinfinity55.github.io,2025-10-28:/pelicanxai/project-specification-for-pelicanxai.html</id><summary type="html">&lt;p&gt;This document outlines the project specification for the Pelicanxai blog.&lt;/p&gt;
+&lt;h2&gt;Project Overview&lt;/h2&gt;
+&lt;p&gt;Pelicanxai is a static blog generated using the Pelican static site generator. The blog is owned and authored by Infinity55. The production site is hosted on GitHub Pages.&lt;/p&gt;
+&lt;h2&gt;Technical Details&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Static Site Generator:&lt;/strong&gt; &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content Format:&lt;/strong&gt; Markdown&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Programming …&lt;/strong&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This document outlines the project specification for the Pelicanxai blog.&lt;/p&gt;
+&lt;h2&gt;Project Overview&lt;/h2&gt;
+&lt;p&gt;Pelicanxai is a static blog generated using the Pelican static site generator. The blog is owned and authored by Infinity55. The production site is hosted on GitHub Pages.&lt;/p&gt;
+&lt;h2&gt;Technical Details&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Static Site Generator:&lt;/strong&gt; &lt;a href="https://getpelican.com/"&gt;Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content Format:&lt;/strong&gt; Markdown&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Programming Language:&lt;/strong&gt; Python&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dependencies:&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pelican&lt;/code&gt;: The static site generator.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ghp-import&lt;/code&gt;: A tool to help deploy to GitHub Pages.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Markdown&lt;/code&gt;: For processing Markdown content.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Theme:&lt;/strong&gt; The blog uses the default Pelican theme. The theme can be customized by modifying the templates in the &lt;code&gt;theme&lt;/code&gt; directory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Project Structure&lt;/h2&gt;
+&lt;p&gt;The project is organized as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;content/&lt;/code&gt;: Contains the blog posts in Markdown format.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;output/&lt;/code&gt;: The generated static website. This directory is not tracked by git.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelicanconf.py&lt;/code&gt;: The main Pelican configuration file for development.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;publishconf.py&lt;/code&gt;: The Pelican configuration file for publishing.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Makefile&lt;/code&gt;: Contains commands for building, serving, and deploying the site.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tasks.py&lt;/code&gt;: Contains invoke tasks for managing the site.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.github/workflows/deploy.yml&lt;/code&gt;: GitHub Actions workflow for automated deployment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Local Development&lt;/h2&gt;
+&lt;p&gt;To set up the local development environment, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the repository: &lt;code&gt;git clone https://github.com/yoloinfinity55/pelicanxai.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a virtual environment: &lt;code&gt;python -m venv .venv&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Activate the virtual environment: &lt;code&gt;source .venv/bin/activate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install the dependencies: &lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start the development server: &lt;code&gt;make devserver&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The site will be available at &lt;code&gt;http://localhost:8000&lt;/code&gt;. The server will automatically regenerate the site whenever you make changes to the content.&lt;/p&gt;
+&lt;h2&gt;Build and Deployment&lt;/h2&gt;
+&lt;p&gt;The blog is built and deployed using a combination of &lt;code&gt;make&lt;/code&gt;, &lt;code&gt;invoke&lt;/code&gt;, and GitHub Actions.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Local Development:&lt;/strong&gt; The site can be built and served locally using the &lt;code&gt;make devserver&lt;/code&gt; command.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deployment:&lt;/strong&gt; The site is automatically deployed to GitHub Pages whenever changes are pushed to the &lt;code&gt;main&lt;/code&gt; branch. The GitHub Actions workflow in &lt;code&gt;.github/workflows/deploy.yml&lt;/code&gt; handles the deployment process. It uses the &lt;code&gt;make github&lt;/code&gt; command, which in turn uses &lt;code&gt;ghp-import&lt;/code&gt; to push the generated site to the &lt;code&gt;gh-pages&lt;/code&gt; branch.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Content Strategy&lt;/h2&gt;
+&lt;p&gt;The blog will feature articles on various topics, starting with a review of a mechanical keyboard. New content will be added to the &lt;code&gt;content/&lt;/code&gt; directory as Markdown files. Each file should have a title, date, and category.&lt;/p&gt;
+&lt;h2&gt;Standard Operating Procedure (SOP)&lt;/h2&gt;
+&lt;p&gt;This section outlines the standard operating procedure for managing the Pelicanxai project.&lt;/p&gt;
+&lt;h3&gt;Content Creation&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a new Markdown file in the &lt;code&gt;content/&lt;/code&gt; directory.&lt;/li&gt;
+&lt;li&gt;Add the following metadata to the top of the file:
+    &lt;code&gt;Title: Your Blog Post Title
+    Date: YYYY-MM-DD HH:MM
+    Category: Your Category&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Write the blog post in Markdown format.&lt;/li&gt;
+&lt;li&gt;Preview the changes locally by running &lt;code&gt;make devserver&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Once you are satisfied with the changes, commit the file and push it to the &lt;code&gt;main&lt;/code&gt; branch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Dependency Management&lt;/h3&gt;
+&lt;p&gt;The project's dependencies are managed using &lt;code&gt;pip&lt;/code&gt; and the &lt;code&gt;requirements.txt&lt;/code&gt; file. To add a new dependency, add it to the &lt;code&gt;requirements.txt&lt;/code&gt; file and then run &lt;code&gt;pip install -r requirements.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;Theme Customization&lt;/h3&gt;
+&lt;p&gt;The blog's theme can be customized by modifying the files in the &lt;code&gt;theme/&lt;/code&gt; directory. The theme uses the Jinja2 templating engine. After making changes to the theme, you need to rebuild the site to see the changes.&lt;/p&gt;
+&lt;h3&gt;Deployment&lt;/h3&gt;
+&lt;p&gt;The site is deployed automatically to GitHub Pages whenever changes are pushed to the &lt;code&gt;main&lt;/code&gt; branch. You can monitor the deployment process in the "Actions" tab of the GitHub repository.&lt;/p&gt;</content><category term="Project"/></entry><entry><title>My First Review</title><link href="https://yoloinfinity55.github.io/pelicanxai/my-first-review.html" rel="alternate"/><published>2024-12-03T10:20:00-05:00</published><updated>2024-12-03T10:20:00-05:00</updated><author><name>Infinity55</name></author><id>tag:yoloinfinity55.github.io,2024-12-03:/pelicanxai/my-first-review.html</id><content type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;</content><category term="Review"/></entry></feed>
