@@ -49,7 +49,7 @@ help:
 	@echo '                                                                          '
 
 assets:
-	npx tailwindcss -i themes/custom/static/css/main.css -o output/theme/css/main.css --minify
+	npm run build-css
 	mkdir -p output/theme/js
 	cp themes/custom/static/js/main.js output/theme/js/main.js
 
