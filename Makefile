@@ -49,6 +49,7 @@ help:
 	@echo '                                                                          '
 
 assets:
+	npm install
 	npm run build-css
 	mkdir -p output/theme/js
 	cp themes/custom/static/js/main.js output/theme/js/main.js
