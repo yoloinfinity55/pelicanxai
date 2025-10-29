@@ -28,7 +28,9 @@
 
       <div class="entry-content">
         {% include 'article_infos.html' %}
-        {{ article.content }}
+        <div class="prose dark:prose-invert max-w-none">
+          {{ article.content }}
+        </div>
       </div><!-- /.entry-content -->
       {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
         <div class="comments">
